@@ -14,12 +14,9 @@ void find_file(char *file_name);
 int main(int argc, char **argv)
 {
 	//check how many arguments the user gives
-	if (argc < 0){
-		perror("Usage: ./mysh.c <argument>*");
-		exit(-1);
-	} else if (argc == 1){
+	if (argc == 1){
 		interactive_mode();
-	} else if (argc == 2){
+	} else {
 		batch_mode(argv);
 	}
 }
@@ -41,7 +38,7 @@ void prompt(int exit_mode){
 }
 
 void parse_input(char **next_line){
-
+	
 }
 
 void tokenize(char* line){
